@@ -1,3 +1,8 @@
+Meteor.call("getDojos", function(err, result) {  
+  console.log("Dojos är: " + result);
+  Session.set('dojos', result);
+});
+
 Template[getTemplate('footer')].helpers({
   footerCode: function(){
     return Settings.get('footerCode');
@@ -10,5 +15,8 @@ Template[getTemplate('footer')].helpers({
   },
   getTemplate: function () {
     return getTemplate(this.template);
+  },
+  dojos: function() {
+    return Session.get('dojos');
   }
 });

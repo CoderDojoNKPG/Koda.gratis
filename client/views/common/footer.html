@@ -1,7 +1,8 @@
 <template name="footer">
   {{#if footerCode}}
     <div class="footer grid {{footerClass}}">
-      {{#markdown}}{{footerCode}}{{/markdown}}
+      {{#markdown}}{{footerCode}}{{/markdown}} 
+      {{dojos}}
     </div>
   {{/if}}
   {{#each footerModules}}
